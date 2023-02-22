@@ -6,4 +6,4 @@ docker:
 	ssh -p 2231 root@localhost 'bash -s' < ./script/install_docker.sh
 
 kubeadm:
-	ssh -p 2231 root@localhost 'bash -s' < ./script/install_docker.sh
+	ssh -p 2231 root@localhost 'bash -s' < ./script/install_kubeadm.sh
