@@ -18,11 +18,11 @@ echo "安装docker 依赖 "
 yum install yum-utils device-mapper-persistent-data lvm2 -y
 
 ## 新增 Docker 仓库。
- yum-config-manager \
- --add-repo \
- https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum-config-manager \
+--add-repo \
+https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
- # yum clean all
+# yum clean all
 
 ## 安装 Docker CE.
 # yum update -y && yum install -y \
