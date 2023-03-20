@@ -15,7 +15,7 @@ kubeadm:
 	ssh -p 2231 root@localhost 'bash -s' < ./script/install_kubeadm.sh
 
 test:
-@echo ${GIT_SHA}
+	@echo ${GIT_SHA}
 	@echo ${GIT_SHORT_SHA}
 	@echo ${GIT_DATE}
 	@echo ${GIT_BRANCH}
