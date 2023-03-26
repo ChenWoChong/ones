@@ -3,7 +3,9 @@ module github.com/ChenWoChong/ones
 go 1.19
 
 require (
+	github.com/BurntSushi/toml v1.2.1
 	github.com/spf13/pflag v1.0.5
+	golang.org/x/crypto v0.1.0
 	k8s.io/apimachinery v0.26.1
 	k8s.io/component-base v0.26.1
 	k8s.io/klog/v2 v2.80.1
