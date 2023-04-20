@@ -17,6 +17,9 @@ yum install -y kubelet-$kubeVersion kubeadm-$kubeVersion kubectl-$kubeVersion --
 
 kubeadm version
 
+### 锁定版本，防止意外升级
+yum install -y yum-plugin-versionlock && yum versionlock kubeadm kubelet kubectl
+
 systemctl enable kubelet
 systemctl daemon-reload
 systemctl restart kubelet

@@ -22,18 +22,12 @@ yum-config-manager \
 --add-repo \
 https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
-# yum clean all
-
-## 安装 Docker CE.
-# yum update -y && yum install -y \
-#   containerd.io-1.2.13 \
-#   docker-ce-19.03.11 \
-#   docker-ce-cli-19.03.11
+yum clean all
 
 ## 安装 Docker 最新版
-yum install -y docker-ce
+yum install -y docker-ce containerd.io docker-ce-cli
 
-## 创建 /etc/docker 目录。
+## 创建 /etc/docker 目录
 mkdir /etc/docker || true
 cat > /etc/docker/daemon.json <<EOF
 {
@@ -50,6 +44,5 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 
-systemctl daemon-reload
-systemctl restart docker
+systemctl daemon-reload && systemctl restart docker
 sudo systemctl enable docker
